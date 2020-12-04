@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 官文发的个人博客">
+    <meta name="keywords" content="KMP算法, 官文发的个人博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 官文发的个人博客</title>
+    <title>KMP算法 | 官文发的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">KMP算法</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                            <a href="/tags/MarkDown/">
+                                <span class="chip bg-color">MarkDown</span>
+                            </a>
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/MarkDown/" class="post-category">
+                                MarkDown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -445,7 +466,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-26
+                    2020-12-04
                 </div>
                 
 
@@ -461,20 +482,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="发明者"><a href="#发明者" class="headerlink" title="发明者"></a>发明者</h2><p>D.E.Knuth，J.H.Morris 和 V.R.Pratt</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="1-根据待查找字符串建立一张表"><a href="#1-根据待查找字符串建立一张表" class="headerlink" title="1.  根据待查找字符串建立一张表"></a>1.  根据待查找字符串建立一张表</h3><p><img src="https://raw.githubusercontent.com/wenfa1999/PicGO/master/1606957836731.gif?token=AF32REJVC2R5EDTPW4WZL7K7ZA5WG" alt="建表"></p>
+<blockquote>
+<ol>
+<li>根据待查找字符串 target 的长度建立数组 table，数组长度为代待查字符串的长度。</li>
+<li>列出待查字符串的所有前缀子字符串。</li>
+<li>从数组下标为 1 处开始填写最长公共前后缀长度，同时 table[0]=-1。</li>
+</ol>
+</blockquote>
+<p><strong>最长公共前后缀的计算（以 target 为”ababca”为例）</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">a：公共前后缀为 0（很明显，长度为 1 的字串公共前后缀恒为 0，即 table[1]=0）。
+ab：公共前后缀为 0，即 table[2]=0。
+aba：最长公共前后缀为 1，因为首位均为 a，即 table[3]=1。
+abab：最长公共前后缀为“ab”，即 table[4]=2。
+ababc：公共前后缀为 0，即 table[5]=0。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<p>最后整张表内容如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">table</td>
+<td align="center">-1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p><strong>发现规律：</strong> 从第一个前缀子字符串a开始，往后下一个前缀子字符串如果在前一个最长公共前后缀的最后一位的下标的下一位与最后一个字符相等，则该字串的最长公共前后缀为前一字串的最长公共前后缀+1；否则为0。</p>
+<h3 id="2-开始匹配"><a href="#2-开始匹配" class="headerlink" title="2. 开始匹配"></a>2. 开始匹配</h3><p><img src="https://raw.githubusercontent.com/wenfa1999/PicGO/master/1606960777573.gif?token=AF32REPWR3TF32FXNEPHZKS7ZBDOY" alt="匹配"></p>
+<p><strong>匹配规则</strong></p>
+<blockquote>
+<p>两个指针i和j分别指向源字符串和目标字符串的第0位字符。<br>如果匹配相等，i和j分别往后移。<br>如果匹配不相等，那么取出此时table表中同个下标对应的值index，并让j指向目标字符串以index为下标的值。</p>
+</blockquote>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><strong>C++：</strong></p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
             </div>
             <hr/>
 
@@ -489,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">官文发</a>
+                    <a href="/about" rel="external nofollow noreferrer">罗生梦</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -499,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/09/26/hello-world/">http://example.com/2020/09/26/hello-world/</a>
+                    <a href="http://example.com/2020/12/04/kmp-suan-fa/">http://example.com/2020/12/04/kmp-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,7 +566,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">官文发</a>
+                    <a href="/about" target="_blank">罗生梦</a>
                     !
                 </span>
             </div>
@@ -536,7 +590,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                                <a href="/tags/MarkDown/">
+                                    <span class="chip bg-color">MarkDown</span>
+                                </a>
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -702,9 +768,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/04/kmp-suan-fa/">
                     <div class="card-image">
@@ -722,9 +789,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -737,6 +804,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -760,7 +828,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/09/26/hello-world/">
@@ -790,7 +858,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

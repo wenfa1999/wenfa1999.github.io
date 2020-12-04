@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-26T03:02:55.089Z</updated>
+  <updated>2020-12-04T06:16:40.847Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KMP算法</title>
+    <link href="http://example.com/2020/12/04/kmp-suan-fa/"/>
+    <id>http://example.com/2020/12/04/kmp-suan-fa/</id>
+    <published>2020-12-04T06:15:00.000Z</published>
+    <updated>2020-12-04T06:16:40.847Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;发明者&quot;&gt;&lt;a href=&quot;#发明者&quot; class=&quot;headerlink&quot; title=&quot;发明者&quot;&gt;&lt;/a&gt;发明者&lt;/h2&gt;&lt;p&gt;D.E.Knuth，J.H.Morris 和 V.R.Pratt&lt;/p&gt;
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="MarkDown" scheme="http://example.com/categories/MarkDown/"/>
+    
+    
+    <category term="Typora" scheme="http://example.com/tags/Typora/"/>
+    
+    <category term="MarkDown" scheme="http://example.com/tags/MarkDown/"/>
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
