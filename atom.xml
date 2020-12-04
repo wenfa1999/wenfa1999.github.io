@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-12-04T06:36:49.552Z</updated>
+  <updated>2020-12-04T06:41:27.933Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>KMP算法</title>
-    <link href="http://example.com/2020/12/04/kmp-suan-fa/"/>
-    <id>http://example.com/2020/12/04/kmp-suan-fa/</id>
+    <link href="http://example.com/2020/12/04/kmp-algorithm/"/>
+    <id>http://example.com/2020/12/04/kmp-algorithm/</id>
     <published>2020-12-04T06:15:00.000Z</published>
-    <updated>2020-12-04T06:36:49.552Z</updated>
+    <updated>2020-12-04T06:41:27.933Z</updated>
     
     
       
