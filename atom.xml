@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>官文发的个人博客</title>
+  <title>阿发的个人博客</title>
   
   
   <link href="https://wenfa1999.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://wenfa1999.github.io/</id>
   
   <author>
-    <name>官文发</name>
+    <name>阿发</name>
     
   </author>
   
