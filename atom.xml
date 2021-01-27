@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>阿发的个人博客</title>
   
-  
+  <subtitle>吾生也有涯，而知也无涯</subtitle>
   <link href="https://wenfa1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://wenfa1999.github.io/"/>
