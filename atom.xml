@@ -6,7 +6,7 @@
   <link href="https://wenfa1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://wenfa1999.github.io/"/>
-  <updated>2021-01-27T03:46:52.452Z</updated>
+  <updated>2021-01-27T06:23:13.842Z</updated>
   <id>https://wenfa1999.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用StreamCMD在Windows上搭建饥荒服务器</title>
+    <link href="https://wenfa1999.github.io/2021/01/27/don-t-starve-together-dedicated-server/"/>
+    <id>https://wenfa1999.github.io/2021/01/27/don-t-starve-together-dedicated-server/</id>
+    <published>2021-01-27T05:05:54.000Z</published>
+    <updated>2021-01-27T06:23:13.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;由于唯一的一台Linux服务器被征用，只能在Windows上搭建饥荒的服务器了。如果在游戏内开房间的话有太多的限制，所以就选择了像Linux一样运行一个独立的饥荒服务器。写下此文，备用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Tutorials" scheme="https://wenfa1999.github.io/categories/Tutorials/"/>
+    
+    
+    <category term="Game" scheme="https://wenfa1999.github.io/tags/Game/"/>
+    
+    <category term="Dont&#39;t Starve Together" scheme="https://wenfa1999.github.io/tags/Dont-t-Starve-Together/"/>
+    
+  </entry>
   
   <entry>
     <title>各数据类型大小</title>
