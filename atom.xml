@@ -6,7 +6,7 @@
   <link href="https://wenfa1999.github.io/atom.xml" rel="self"/>
   
   <link href="https://wenfa1999.github.io/"/>
-  <updated>2020-12-04T06:45:42.619Z</updated>
+  <updated>2021-01-27T03:46:52.452Z</updated>
   <id>https://wenfa1999.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>各数据类型大小</title>
+    <link href="https://wenfa1999.github.io/2021/01/27/data-words/"/>
+    <id>https://wenfa1999.github.io/2021/01/27/data-words/</id>
+    <published>2021-01-26T16:00:00.000Z</published>
+    <updated>2021-01-27T03:46:52.452Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;数据类型&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;16位编译器&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;32位编译器&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="others" scheme="https://wenfa1999.github.io/categories/others/"/>
+    
+    
+    <category term="CS" scheme="https://wenfa1999.github.io/tags/CS/"/>
+    
+  </entry>
   
   <entry>
     <title>KMP算法</title>

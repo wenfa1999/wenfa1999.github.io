@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>各数据类型大小</title>
+      <link href="2021/01/27/data-words/"/>
+      <url>2021/01/27/data-words/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">数据类型</th><th align="center">16位编译器</th><th align="center">32位编译器</th><th align="center">64位编译器</th></tr></thead><tbody><tr><td align="center">char</td><td align="center">1字节</td><td align="center">1字节</td><td align="center">1字节</td></tr><tr><td align="center">char*</td><td align="center">2字节</td><td align="center">4字节</td><td align="center">8字节</td></tr><tr><td align="center">short int</td><td align="center">2字节</td><td align="center">2字节</td><td align="center">2字节</td></tr><tr><td align="center">int</td><td align="center">2字节</td><td align="center">4字节</td><td align="center">4字节</td></tr><tr><td align="center">unsigned int</td><td align="center">2字节</td><td align="center">4字节</td><td align="center">4字节</td></tr><tr><td align="center">float</td><td align="center">4字节</td><td align="center">4字节</td><td align="center">4字节</td></tr><tr><td align="center">double</td><td align="center">8字节</td><td align="center">8字节</td><td align="center">8字节</td></tr><tr><td align="center">long</td><td align="center">4字节</td><td align="center">4字节</td><td align="center">8字节</td></tr><tr><td align="center">long long</td><td align="center">8字节</td><td align="center">8字节</td><td align="center">8字节</td></tr><tr><td align="center">unsigned long</td><td align="center">4字节</td><td align="center">4字节</td><td align="center">8字节</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> others </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>KMP算法</title>
       <link href="2020/12/04/kmp-algorithm/"/>
       <url>2020/12/04/kmp-algorithm/</url>
