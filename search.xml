@@ -121,6 +121,35 @@
     </entry>
     
     
+    
+    <entry>
+      <title>WIndows10上VMWare安装Ubuntu</title>
+      <link href="2020/02/01/vmware-win/"/>
+      <url>2020/02/01/vmware-win/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ubuntu系统镜像下载"><a href="#Ubuntu系统镜像下载" class="headerlink" title="Ubuntu系统镜像下载"></a>Ubuntu系统镜像下载</h2><p>前往Ubuntu官网<a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a>下载镜像，这里选择的是Ubuntu 20.04.1 LTS，带有LTS的版本表示长期维护版本，譬如Ubuntu 20.04.1 LTS就会支持到2025年4月。当然也可以下载其他版本，对于大部分个人用户而言并无太大区别。</p><p>当然也可以前往国内镜像网站镜像下载，譬如阿里云镜像站<a href="https://mirrors.aliyun.com/">https://mirrors.aliyun.com/</a>。注意需要点击的是OS镜像，而不是镜像列表下的各个系统。</p><h2 id="VMWare安装Ubuntu"><a href="#VMWare安装Ubuntu" class="headerlink" title="VMWare安装Ubuntu"></a>VMWare安装Ubuntu</h2><h3 id="新建虚拟机"><a href="#新建虚拟机" class="headerlink" title="新建虚拟机"></a>新建虚拟机</h3><blockquote><ol><li>打开VMWare-<strong>创建新的虚拟机</strong>；</li><li><strong>典型(推荐)（T）</strong>，下一步；</li><li><strong>安装客户机操作系统</strong>，这里要注意选择**稍后安装操作系统(S)**，下一步；</li><li>客户机操作系统选择<strong>Linux(L)**，版本选择</strong>Ubuntu64位**，下一步；</li><li>虚拟机名称自定义，位置推荐放在专门的有较大剩余空间的文件夹下，下一步；</li><li>磁盘容量20G以上，如果准备长期使用或者在里边存一些工作/学习文件建议40G起步，下一步；</li><li>完成。</li></ol></blockquote><p><strong>开启虚拟机前需要先添加系统镜像</strong>，点击<strong>编辑虚拟机设置</strong>，在<strong>CD/DVD</strong>选项下选择*<em>使用ISO映像文件(M)**，然后点击</em>浏览*，选择下载好的系统镜像。选择好后点击确定。</p><h3 id="开启虚拟机"><a href="#开启虚拟机" class="headerlink" title="开启虚拟机"></a>开启虚拟机</h3><p>首先是磁盘检查，可以鼠标单机虚拟机屏幕，然后输入<code>ctrl + C</code>跳过。</p><p>进入向导界面，选择语言”中文”，当然按照自己的需求进行选择。</p><p>点击“安装 Ubuntu”(Install Ubuntu)，键盘布局默认就好，点击继续。</p><p><strong>更新和其它软件</strong>，选择最小安装或者正常安装都行，关掉<strong>安装Ubuntu时下载更新</strong>。</p><blockquote><p>因为此时的服务器用的是官方服务器，下载速度会比较慢，可以先安装系统，安装完成后<strong>换源</strong>再进行更新。</p></blockquote><p><strong>安装类型</strong>默认是清除整个磁盘并安装Ubuntu，直接点击<strong>现在安装</strong>。</p><p>时区自选，然后是账户信息，同样自定义，输入王城无误后点击<strong>继续</strong>。</p><p>开始安装。</p><blockquote><p>在复制完文件后可能会进行一下下载，可以点击左侧三角形展开，在下载的时候点击右边的<strong>Skip</strong>暂时跳过这些步骤，同理是为了节省时间。</p></blockquote><p>安装完成后重启。</p><h2 id="一些需要的配置"><a href="#一些需要的配置" class="headerlink" title="一些需要的配置"></a>一些需要的配置</h2><p>重启后登录账户。</p><h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><p>点击坐下角九宫格图标<strong>显示应用程序</strong>，找到<strong>软件和更新</strong>打开。</p><blockquote><p>隔壁会有一个叫<strong>软件更新器</strong>的，长得非常像，一般来说右边的是我们要打开的软件。</p></blockquote><p>打开后可以看到有个“中国 的服务器”，点击，然后选择”其他站点…“，然后在中国列表下选择一个镜像源，个人习惯选择阿里云的(mirrors.aliyun.com)，选择好后点击“选择服务器”，会有弹窗需要输入密码。确定密码后返回，点击“关闭”，会提醒可用软件的列表信息已过时，点击“重新载入(R)”，更新软件列表。</p><h3 id="下载-更新软件"><a href="#下载-更新软件" class="headerlink" title="下载/更新软件"></a>下载/更新软件</h3><p>在桌面<em>右键</em>-<em>在终端中打开</em>，打开Ubuntu的终端。输入下面的命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入后键入回车，会提示输入密码，注意在终端中输入Linux用户密码并不会有任何的显示，输入完成后再键入回车。</p><p>执行完上面的命令后一般会提示有很多软件可以进行更新，先不管，而是接着输入下面的命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt -y install open-vm-tools<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个就相当于以往的VMWare Tools，不过这个版本安装更为简便。</p><p>安装完成后有一个很明显的现象：Ubuntu屏幕大小变成了VMWare虚拟机的屏幕大小，并且可以随意改变屏幕大小。</p><p>然后是下一条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt -y upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这条命令就是在下更新软件，相当于安装过程中为了节省时间而关闭的下载更新。</p><h2 id="VMWare注意事项"><a href="#VMWare注意事项" class="headerlink" title="VMWare注意事项"></a>VMWare注意事项</h2><blockquote><p> 对于大部分笔记本来说一般都水有两个以上的网卡(以太网以及WIFI)，部分电脑的虚拟机可能会偶尔没有网络，可以进行手动设置。</p></blockquote><p>点击VMWare菜单栏的<strong>编辑(E)**，</strong>虚拟网络编辑器**。</p><p>点击下方的**更改设置(C)**，会申请管理员权限，确定并重新加载完成后可以看到，桥接模式默认是桥接至自动，我们可以在虚拟机系统没有网络的时候试着手动选择对应的网卡，确定后虚拟机内部系统应该就有网络了。</p><blockquote><p>当然大部分情况下是不需要手动设置的。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tutorials </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VMWare </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Windows10 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
